@@ -1,0 +1,37 @@
+{
+    "env": {
+        "production": {
+            "plugins": [
+                "transform-object-assign",
+                "transform-remove-console",
+                "@babel/plugin-proposal-class-properties",
+                "@babel/plugin-syntax-class-properties"
+            ],
+            "sourceMaps": false,
+            "presets": [
+                ["@babel/preset-env", {
+                    "targets": {
+                        "browsers": ["last 2 versions", "ie >= 11"]
+                    }
+                }],
+                ["@babel/preset-react"]
+            ]
+        },
+        "development": {
+            "plugins": [
+                "transform-object-assign",
+                "@babel/plugin-proposal-class-properties",
+                "@babel/plugin-syntax-class-properties"
+            ],
+            "sourceMaps": false,
+            "presets": [
+                ["@babel/preset-env", {
+                    "targets": {
+                        "browsers": ["last 2 versions", "ie >= 11"]
+                    }
+                }],
+                ["@babel/preset-react"]
+            ]
+        }
+    }
+}
